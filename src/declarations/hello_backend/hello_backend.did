@@ -1,0 +1,10 @@
+type Task = 
+ record {
+   content: text;
+   title: text;
+ };
+service : {
+  addTask: (text, text) -> () oneway;
+  getTasks: () -> (vec Task) query;
+  removeTask: (nat) -> (vec Task);
+}
